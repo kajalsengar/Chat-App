@@ -1,15 +1,16 @@
 {
   "name": "chat-app",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
- "scripts": {
-  "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend",
-  "start": "npm run start --prefix Backend"
-}
-,
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+  "description": "Chat App with Backend and Frontend",
+  "main": "Backend/index.js",
+  "scripts": {
+    "start": "node Backend/index.js",
+    "build": "npm install --prefix Backend && npm install --prefix Frontend && npm run build --prefix Frontend",
+    "dev": "concurrently \"npm run dev --prefix Backend\" \"npm run dev --prefix Frontend\""
+  },
+  "author": "Kajal Sengar",
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^8.2.0"
+  }
 }
